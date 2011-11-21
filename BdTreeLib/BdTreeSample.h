@@ -1,5 +1,5 @@
-#ifndef __BDTREE_SAMPLE__H
-#define __BDTREE_SAMPLE_H
+#ifndef __BDTREE_SAMPLE_H__
+#define __BDTREE_SAMPLE_H__
 #include<vector>
 #include<string>
 using namespace std;
@@ -12,9 +12,9 @@ vector<int> numericAttributes; // Only Integer attributes are currently allowed.
 bool decision;
 
 public:
-BdTreeSample(vector<int> inpSample, bool curDecision): numericAttributes(inpSample), decision(curDecision) { } //I'm lazy to write cpp
+BdTreeSample(vector<int> inpSample, bool curDecision): numericAttributes(inpSample), decision(curDecision) { } //avoiding cpp file
 bool getDecision() { return decision; }
-bool getnumericAttributes() { return numericAttributes; }
+vector<int> getNumericAttributes() { return numericAttributes; }
 };
 
 #endif
