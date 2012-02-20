@@ -1,3 +1,14 @@
+ /****************************************************
+ *
+ * BdTreeLib -  Decision Tree for binary classification ( could be Extrended )
+ *
+ * BdTreeSample.cpp - This is a container for samples(X -> Y ) that are to be fed to the decisionTree. 
+ * We can easily add support to more data types by making some changes here
+ *
+ * Initial Version : Jaison George ( jaisong87@gmail.com ) 
+ *
+ **********************************************************/
+
 #ifndef __BDTREE_SAMPLE_H__
 #define __BDTREE_SAMPLE_H__
 #include<vector>

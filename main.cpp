@@ -1,3 +1,13 @@
+ /****************************************************
+ *
+ * BdTreeLib -  Decision Tree for binary classification ( could be Extrended ) 
+ *
+ * This is a sample program that uses BdTreeLib. Make changes here to try different inputs
+ *
+ * Initial Version : Jaison George ( jaisong87@gmail.com ) 
+ *
+ **********************************************************/
+
 #include "BdTreeLib/BdTreeSample.h"
 #include "BdTreeLib/BdTree.h"
 #include <fstream>
@@ -5,28 +15,19 @@
 #include<algorithm>
 using namespace std;
 
-/*
-void f1(string S)
-{
-cout<<S<<"   ";
-}
-*/
-
 int main()
 {
 
-string attributeNames[] = { "STABILITY", "ERROR", "SIGN", "WIND", "MAGNITUDE", "VISIBILITY" };
-vector<string> attribNames(attributeNames, attributeNames + sizeof(attributeNames)/sizeof(string)) ;
+string attributeNames[] = { "STABILITY", "ERROR", "SIGN", "WIND", "MAGNITUDE", "VISIBILITY" }; // attribute labels
+vector<string> attribNames(attributeNames, attributeNames + sizeof(attributeNames)/sizeof(string)) ; // convert to vector<string>
+int dimensionality = 6;
 
-//cout<<"CP 1"<<endl;
-//for_each(attribNames.begin(), attribNames.end(), f1);
+BdTree bt1(attribNames, dimensionality , INFO_GAIN );
 
-BdTree bt1(attribNames, 6);
+ifstream finp("trainingSamples.dat"); // Input File ( Format Inp1 Inp2 Inp3 Inp4 Inp5 Inp6\n)
 
-ifstream finp("trainingSamples.dat");
-
-string line;
-while(getline(finp, line))
+string line; 
+while(getline(finp, line)) // This is one (X,Y) 
 	{
 		stringstream ss1(line);
 		int tmp;
@@ -35,21 +36,20 @@ while(getline(finp, line))
 		bool concept;
 		
 		ss1>>tmp;
-		if(tmp==1) concept = true;
+		if(tmp==1) concept = true; // Got Y 
 		else concept = false;
 		
-		for(int i = 0; i<6; i++)
+		for(int i = 0; i < dimensionality ; i++) // Get all 6 X values
 			{
 				ss1>>tmp;
 				attribVals.push_back(tmp);
 			}	
 	
-		BdTreeSample curSample(attribVals, concept);
-		bt1.addNextSample(curSample);
+		BdTreeSample curSample(attribVals, concept); //  Create Sample
+		bt1.addNextSample(curSample); // Add this sample also
 	}
 
-bt1.displaySamples();
-
+//bt1.displaySamples();
+bt1.startTraining(); // Train
 return 0;
 }
-

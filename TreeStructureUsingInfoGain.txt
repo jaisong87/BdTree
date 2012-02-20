@@ -1,0 +1,117 @@
+Start training ...
+Learning for Node#1 at level#0
+{
+Splitting using VISIBILITY
+Learning on subTree for VISIBILITY : 1
+  Learning for Node#2 at level#1
+  {
+  Splitting using ERROR
+  Learning on subTree for ERROR : 1
+    Learning for Node#3 at level#2
+    {
+    Decision made : YES
+    }
+  Learning on subTree for ERROR : 2
+    Learning for Node#4 at level#2
+    {
+    Decision made : YES
+    }
+  Learning on subTree for ERROR : 3
+    Learning for Node#5 at level#2
+    {
+    Splitting using STABILITY
+    Learning on subTree for STABILITY : 1
+      Learning for Node#6 at level#3
+      {
+      Splitting using SIGN
+      Learning on subTree for SIGN : 1
+        Learning for Node#7 at level#4
+        {
+        Splitting using MAGNITUDE
+        Learning on subTree for MAGNITUDE : 1
+          Learning for Node#8 at level#5
+          {
+          Decision made : NO
+          }
+        Learning on subTree for MAGNITUDE : 2
+          Learning for Node#9 at level#5
+          {
+          Decision made : NO
+          }
+        Learning on subTree for MAGNITUDE : 3
+          Learning for Node#10 at level#5
+          {
+          Splitting using WIND
+          Learning on subTree for WIND : 1
+            Learning for Node#11 at level#6
+            {
+            Decision made : YES
+            }
+          Learning on subTree for WIND : 2
+            Learning for Node#12 at level#6
+            {
+            Decision made : NO
+            }
+          }
+        Learning on subTree for MAGNITUDE : 4
+          Learning for Node#13 at level#5
+          {
+          Decision made : YES
+          }
+        }
+      Learning on subTree for SIGN : 2
+        Learning for Node#14 at level#4
+        {
+        Decision made : YES
+        }
+      }
+    Learning on subTree for STABILITY : 2
+      Learning for Node#15 at level#3
+      {
+      Decision made : YES
+      }
+    }
+  Learning on subTree for ERROR : 4
+    Learning for Node#16 at level#2
+    {
+    Splitting using STABILITY
+    Learning on subTree for STABILITY : 1
+      Learning for Node#17 at level#3
+      {
+      Splitting using MAGNITUDE
+      Learning on subTree for MAGNITUDE : 1
+        Learning for Node#18 at level#4
+        {
+        Decision made : NO
+        }
+      Learning on subTree for MAGNITUDE : 2
+        Learning for Node#19 at level#4
+        {
+        Decision made : NO
+        }
+      Learning on subTree for MAGNITUDE : 3
+        Learning for Node#20 at level#4
+        {
+        Decision made : NO
+        }
+      Learning on subTree for MAGNITUDE : 4
+        Learning for Node#21 at level#4
+        {
+        Decision made : YES
+        }
+      }
+    Learning on subTree for STABILITY : 2
+      Learning for Node#22 at level#3
+      {
+      Decision made : YES
+      }
+    }
+  }
+Learning on subTree for VISIBILITY : 2
+  Learning for Node#23 at level#1
+  {
+  Decision made : NO
+  }
+}
+Done with training ...
+There are 23 nodes 

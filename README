@@ -1,1 +1,8 @@
 This is a decision tree implementation in C++ for binary decisions. Currently it supports all numeric attributes. 
+
+How to Compile ?
+g++ main.cpp BdTreeLib/BdTree.h  BdTreeLib/BdTree.cpp BdTreeLib/BdTreeSample.h
+
+Only main.cpp needs to be changed to try different inputs
+
+Pending : code for prediction is not written. Tree is made and it is just a walk through the tree to get the class
